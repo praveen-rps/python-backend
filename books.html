@@ -42,6 +42,7 @@
             <th>Book Id</th>
             <th>Book Name</th>
             <th>Book Author</th>
+            <th>Actions</th>
             
         </tr>
         {% for book in books %}
@@ -49,9 +50,14 @@
             <td>{{book.bookid}}</td>
             <td>{{book.name}}</td>
             <td>{{book.author}}</td>
+            <td>
+                <a href="/edit/{{book.bookid}}">Edit</a>
+                 <a href="/delete/{{book.bookid}}">Delete</a>
+            </td>
             
         </tr>
         {% endfor %}
     </table>
+    <p align="center"><a href="/">Home</a></p>
 </body>
 </html>
